@@ -1,4 +1,4 @@
-int atoi(const char *str)
+int gm_atoi(const char *str)
 {
 	int i = 0, sign = 1,result = 0;
 	while(str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == ' '))

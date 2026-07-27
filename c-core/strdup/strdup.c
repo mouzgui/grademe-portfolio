@@ -1,5 +1,5 @@
 #include <stdlib.h>
-char *strdup(const char *src)
+char *gm_strdup(const char *src)
 {
 	int i = 0, j = 0;
 	while(src[i])
