@@ -1,6 +1,6 @@
 #include <stddef.h>
 
-int	strncmp(const char *s1, const char *s2, int n)
+int	gm_strncmp(const char *s1, const char *s2, int n)
 {
 	if(n == 0)
 		return 0;
