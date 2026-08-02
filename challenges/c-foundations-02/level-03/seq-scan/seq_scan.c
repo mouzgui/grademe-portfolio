@@ -1,5 +1,5 @@
 #include <unistd.h>
-void alltolower(char *str)
+void to_lower(char *str)
 {
 	int i = 0;
 	while(str[i])
@@ -9,29 +9,29 @@ void alltolower(char *str)
 		i++;
 	}
 }
-char *ft_strcpy(char *src, char *dest)
+char *strcpy(char *src,char *dst)
 {
 	int i = 0;
 	while(src[i])
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return dest;
+	dst[i] = '\0';
+	return dst;
 }
-
 int	main(int ac, char **av)
 {
-
-	if (ac != 3)
+	if(ac != 3)
 		write(1,"wrong number of arguments\n",26);
 	else
 	{
-		char s1[100],s2[100];
-		ft_strcpy(av[1],s1), ft_strcpy(av[2],s2);
-    alltolower(s1);
-    alltolower(s2);
+		char s1[100];
+		char s2[100];
+		strcpy(av[1],s1);
+		strcpy(av[2],s2);
+		to_lower(s1);	
+		to_lower(s2);
 		int i = 0;
 		int j = 0;
 		while(s1[i] && s2[j])
@@ -39,18 +39,18 @@ int	main(int ac, char **av)
 			if(s1[i] == s2[j])
 			{
 				i++;
-			}		
+			}
 			j++;
-		}
-		if(s1[i] == '\0')
+			if(s1[i] == '\0')
 			{
-        int s = 0;
-				while(av[1][s])
+				i = 0;
+				while(av[1][i])
 				{
-          write(1,&av[1][s],1);
-					s++;
+					write(1,&av[1][i],1);
+					i++;
 				}
-      }
+			}
+		}
 		write(1,"\n",1);
 	}
 	return (0);
