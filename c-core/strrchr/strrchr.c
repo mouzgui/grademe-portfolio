@@ -1,13 +1,17 @@
+#include <stddef.h>
+
 char	*strrchr(const char *s, int c)
 {
+	char *str = (char *)s;
 	int i = 0;
-	while(s[i])
+	while(str[i])
 		i++;
 	while(i >= 0)
-	{	
-		if(s[i] == (char)c)
-			return (char *)&s[i];
+	{
+		if(str[i] == (char)c)
+			return &str[i];
 		i--;
 	}
-	return (0);
+
+	return (NULL);
 }
