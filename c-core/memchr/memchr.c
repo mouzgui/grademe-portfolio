@@ -1,6 +1,6 @@
 #include <stddef.h>
 
-void	*memchr(const void *s, int c, size_t n)
+void	*gm_memchr(const void *s, int c, size_t n)
 {
 	unsigned char *data = (unsigned char *)s;
 	unsigned int i = 0;

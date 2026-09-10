@@ -1,6 +1,6 @@
 #include <stddef.h>
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	gm_memcmp(const void *s1, const void *s2, size_t n)
 {
 	 unsigned char *f = (unsigned char *)s1;
   	unsigned char *l = (unsigned char *)s2;
