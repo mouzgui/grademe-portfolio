@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-void	*calloc(size_t nmemb, size_t size)
+void	*gm_calloc(size_t nmemb, size_t size)
 {
 	if(nmemb == 0 || size == 0)
 		return malloc(0);
